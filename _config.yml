@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/type-theme"
+baseurl: ""
 url: "https://hanbikim.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
