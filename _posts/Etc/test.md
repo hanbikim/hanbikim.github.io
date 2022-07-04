@@ -1,0 +1,10 @@
+---
+layout: post
+title: "test"
+subtitle: ""
+categories: [Etc.]
+tags: [test]
+comments: true
+---
+
+this is for test
