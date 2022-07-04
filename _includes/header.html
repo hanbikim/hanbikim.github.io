@@ -2,14 +2,14 @@
 	<nav class="site-nav">
 	    <ul>
 	      <li class="left-nav">
-	        
+
 	        <h1 class="site-title">
 	          <a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
 	        </h1>
 	      </li>
 	      <li class="right-nav">
 	        {% for page in site.pages %} {% if (page.title =='Tags') and page.hide
-	        != true %}
+	        != false %}
 	        <a class="page-link" href="{{ page.url | relative_url }}">
 	          {{ page.title }}
 	        </a>

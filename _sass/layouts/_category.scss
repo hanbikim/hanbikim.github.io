@@ -1,0 +1,25 @@
+// Post listing
+.category-title {
+  clear: left;
+  padding-top: $padding-small * 1.5;
+  text-align: center;
+}
+@media (max-width: 650px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+}
+.posts-list {
+  @extend %padding-regular;
+  clear: left;
+  padding-top: $padding-small;
+  list-style: none;
+  li {
+    a {
+      font-weight: bold;
+    }
+  }
+}
