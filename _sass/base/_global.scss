@@ -120,11 +120,17 @@ a {
   padding: 0;
 }
 // Responsive media
+img{
+  display: block;
+  margin: 1em auto;
+}
 iframe, img, embed, object, video {
   max-width: 100%;
 }
 img[align=left] {
-  margin-right: 3%;
+  margin-right: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 img[align=right] {
   margin-left: 3%;

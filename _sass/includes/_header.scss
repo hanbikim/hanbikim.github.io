@@ -1,14 +1,18 @@
 .site-header {
-  @extend %padding-small;
+  //@extend %padding-small;
+  padding-left: $padding-small;
+  padding-right: $padding-small;
+  padding-top: 2%;
   background: $brand-color;
   border-bottom: 1px solid $border-color;
   display: inline-block;
-  float: left;
   width: 100%;
 
   a {
-    color: $header-link-color;
-  }
+     color: $header-link-color;
+     font-weight: bolder;
+     font-size: smaller;
+   }
 
   .avatar {
     height: 2em;
@@ -27,29 +31,53 @@
   }
 
   .site-nav {
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      line-height: 1.5;
-      float: right;
-      text-align: right;
+      text-align: center;
+      display: inline-block;
+      padding-top: 2%;
+      // padding-bottom: 4%;
+      width: 100%;
     }
-    li {
-      display: inline;
-      margin-right: 1em;
-      vertical-align: middle;
-      &:last-of-type {
-        margin-right: 0;
+    .site-nav {
+      .right-nav {
+        float: right;
       }
-    }
-    @media (max-width: 1100px) {
+      .left-nav {
+        float: left;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1.5;
+      }
+      li {
+        display: inline;
+        margin-right: 1em;
+        padding-bottom: 2%;
+        // vertical-align: middle;
+        // &:last-of-type {
+        //   margin-right: 0;
+        // }
+      }
+
+    @media (max-width: 600px) {
       ul {
         display: inline-block;
-        float: left;
         padding-top: $padding-small;
-        text-align: left;
+        text-align: center;
         width: 100%;
+      }
+      li {
+        display: inline;
+        text-align: center;
+        float: left;
+      }
+      .social-icon {
+        margin-right: 0.5em;
+      }
+      .left-nav {
+        float: none;
       }
     }
   }
@@ -90,3 +118,116 @@
         }
     }
 }
+
+.site-category {
+    background: $brand-color;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+    clear: left;
+    display: inline-block;
+    width: 100%;
+
+    ul {
+      height: 53px;
+      list-style: none;
+      line-height: 1.5;
+      margin: 0 auto;
+      text-align: center;
+      display: inline-block;
+    }
+    li {
+      float: left;
+      display: inline;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      ul {
+        //background: rgb(109,109,109);
+        height: 0px;
+        list-style: none;
+        line-height: 1.5;
+        margin: 0 auto;
+        text-align: center;
+        display: inline-block;
+      }
+      li {
+        float: none;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 650px) {
+    .site-category {
+      padding: 0px 0px 20px 0px;
+    }
+  }
+
+  .site-category li a {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 58px;
+    margin: 0px;
+    padding: 0px 25px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .site-category li a:hover {
+    background: rgb(71, 71, 71);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .site-category li ul {
+    background: rgb(109, 109, 109);
+    display: none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+    //height:auto;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    width: 200px;
+    z-index: 200;
+    /*top:1em;*/
+    //left:0;
+  }
+
+  .site-category li:hover ul {
+    display: block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+  }
+
+  .site-category li li {
+    background: $brand-color;
+    display: block;
+    float: none;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+  }
+
+  .site-category li:hover li a {
+    background: none;
+  }
+
+  .site-category li ul a {
+    display: block;
+    height: 50px;
+    font-size: 12px;
+    font-style: normal;
+    margin: 0px;
+    padding: 0px 0px 0px 15px;
+    text-align: left;
+  }
+
+  .site-category li ul a:hover,
+  .menubar li ul li:hover a {
+    background: rgb(71, 71, 71);
+    border: 0px;
+    color: #ffffff;
+    text-decoration: none;
+  }

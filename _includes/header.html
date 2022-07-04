@@ -1,49 +1,84 @@
 <header class="site-header">
-	<div class="branding">
-		{% if site.theme_settings.gravatar %}
-		<a href="{{ site.baseurl }}/">
-			<img class="avatar" src="https://secure.gravatar.com/avatar/{{ site.theme_settings.gravatar }}?s=100" alt=""/>
-		</a>
-		{% elsif site.theme_settings.avatar %}
-		<a href="{{ site.baseurl }}/">
-			<img class="avatar" src="{{ site.baseurl }}/{{ site.theme_settings.avatar }}" alt=""/>
-		</a>
-		{% endif %}
-		<h1 class="site-title">
-			<a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
-		</h1>
-	</div>
 	<nav class="site-nav">
-		<ul>
-			{% if site.theme_settings.site_navigation_sort %}
-				{% assign site_pages = site.pages | sort: site.theme_settings.site_navigation_sort %}
-			{% else %}
-				{% assign site_pages = site.pages %}
-			{% endif %}
-			{% for page in site_pages %}
-			{% if page.title and page.hide != true %}
-			<li>
-				<a class="page-link" href="{{ page.url | relative_url }}">
-					{{ page.title }}
-				</a>
-			</li>
-			{% endif %}
-			{% endfor %}
-			<!-- Social icons from Font Awesome, if enabled  -->
-			{% include icons.html %}
+	    <ul>
+	      <li class="left-nav">
+	        {% if site.theme_settings.gravatar %}
+	        <a href="{{ site.baseurl }}/">
+	          <img
+	            class="avatar"
+	            src="https://secure.gravatar.com/avatar/{{ site.theme_settings.gravatar }}?s=100"
+	            alt=""
+	          />
+	        </a>
+	        {% elsif site.theme_settings.avatar %}
+	        <a href="{{ site.baseurl }}/">
+	          <img
+	            class="avatar"
+	            src="{{ site.baseurl }}/{{ site.theme_settings.avatar }}"
+	            alt=""
+	          />
+	        </a>
+	        {% endif %}
+	        <h1 class="site-title">
+	          <a href="{{ site.baseurl }}/">{{ site.theme_settings.title }}</a>
+	        </h1>
+	      </li>
+	      <li class="right-nav">
+	        {% for page in site.pages %} {% if (page.title =='Tags') and page.hide
+	        != true %}
+	        <a class="page-link" href="{{ page.url | relative_url }}">
+	          {{ page.title }}
+	        </a>
+	      </li>
+	      {% endif %} {% endfor %}
+	      <!-- Search bar -->
+	      <li class="right-nav social-icon">
+	        <!-- Social icons from Font Awesome, if enabled  -->
+	        {% include icons.html %}
+	      </li>
+	      {% if site.theme_settings.search %}
+	      <li class="right-nav">
+	        <form action="{{ site.baseurl }}/search.html" method="get">
+	          <input type="text" id="search-box" name="query" class="" />
+	          <button type="submit" class="">
+	            <i class="fa fa-fw fa-search"></i>
+	          </button>
+	        </form>
+	      </li>
+	      {% endif %}
+	    </ul>
+	  </nav>
 
-            <!-- Search bar -->
-            {% if site.theme_settings.search %}
-            <li>
-            <form action="{{ site.baseurl }}/search.html" method="get">
-                <input type="text" id="search-box" name="query" placeholder="Search" class="">
-                <button type="submit" class="">
-                    <i class="fa fa-fw fa-search"></i>
-                </button>
-            </form>
-            </li>
-            {% endif %}
-		</ul>
-	</nav>
+	<div class="site-category">
+	 <ul>
+		 <li><a href="/About">About</a></li>
+		 <li>
+			 <a>Algorithm</a>
+			 <ul>
+				 <li><a href="/Algorithm/Concept">Concept</a></li>
+				 <li><a href="/Algorithm/Solving">Solving</a></li>
+			 </ul>
+		 </li>
+
+		 <li>
+			 <a>CBNU</a>
+			 <ul>
+				 <li><a href="/CBNU/3_1">3.1</a></li>
+				 <li><a href="/CBNU/2_2">2.2</a></li>
+				 <li><a href="/CBNU/2.1">2.1</a></li>
+			 </ul>
+		 </li>
+
+		 <li>
+			 <a>Purdue</a>
+			 <ul>
+				 <li><a href="/Purdue/Study">Study</a></li>
+				 <li><a href="/Purdue/Daily">Purdue Life</a></li>
+			 </ul>
+		 </li>
+
+		 <li><a href="/Etc">Etc.</a></li>
+	 </ul>
+ </div>
 
 </header>

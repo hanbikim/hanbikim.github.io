@@ -1,3 +1,4 @@
+<ul class = "social">
 {% if site.theme_settings.rss %}
 <li>
 	<a href="{{ "/feed.xml" | relative_url }}" title="{{ site.theme_settings.str_rss_follow }}">
@@ -54,6 +55,14 @@
 </li>
 {% endif %}
 
+{% if site.theme_settings.linkedin %}
+<li>
+	<a href="{{ site.theme_settings.linkedin }}" title="{{ site.theme_settings.str_follow_on }} LinkedIn">
+		<i class="fab fa-fw fa-linkedin"></i>
+	</a>
+</li>
+{% endif %}
+
 {% if site.theme_settings.github %}
 <li>
 	<a href="https://github.com/{{ site.theme_settings.github }}" title="{{ site.theme_settings.str_follow_on }} GitHub">
@@ -74,14 +83,6 @@
 <li>
 	<a href="http://instagram.com/{{ site.theme_settings.instagram }}" title="{{ site.theme_settings.str_follow_on }} Instagram">
 		<i class="fab fa-fw fa-instagram"></i>
-	</a>
-</li>
-{% endif %}
-
-{% if site.theme_settings.linkedin %}
-<li>
-	<a href="{{ site.theme_settings.linkedin }}" title="{{ site.theme_settings.str_follow_on }} LinkedIn">
-		<i class="fab fa-fw fa-linkedin"></i>
 	</a>
 </li>
 {% endif %}
@@ -173,3 +174,4 @@
 	</a>
 </li>
 {% endif %}
+</ul>

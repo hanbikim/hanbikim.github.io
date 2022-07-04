@@ -12,26 +12,26 @@ theme_settings:
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
-  header_text: >
-     <p>Remove all header text in <code>_config.yml</code> to disable this feature.</p>
-  header_text_feature_image:
+  header_text:
+     <p></p>
+  header_text_feature_image: assets/img/ny2.jpg
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "hanbikim20@g.cbnu.ac.kr"
   behance:
   bitbucket:
   dribbble:
   facebook:
   flickr:
   gitlab:
-  github: "rohanchandra/type-theme"
+  github: "hanbikim/"
   gitter:
   google_plus:
   instagram:
-  linkedin:  # Full URL
+  linkedin: "https://www.linkedin.com/in/hanbi-kim/"
   pinterest:
   reddit:
   soundcloud:
@@ -46,7 +46,7 @@ theme_settings:
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname:
   katex: true # Enable if using math markup
-  search: false # Enable the search feature
+  search: true # Enable the search feature
 
   # Localization strings
   str_follow_on: "Follow on"
