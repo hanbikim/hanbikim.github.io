@@ -66,10 +66,7 @@ theme_settings:
 
   # Post navigation
   post_navigation: true
-
-
-google-site-verification: "wOfnu0L7yUEXXPYcN3bsI7PfA1Pl_YbT0VtbptZf5JM"
- 
+   
 encoding: "utf-8"
 # Configure the plugin here
 # category_path: "category" # <- default value
