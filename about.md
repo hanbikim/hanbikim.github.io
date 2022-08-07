@@ -1,12 +1,10 @@
 ---
 layout: page
-title: About
-permalink: /about/
-feature-img: "assets/img/sample_feature_img_2.png"
+title: About Me
+permalink: "about/"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+<!-- img -->
+## Hanbi Kim
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
-
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+A computer science student who is interested in Artificial Intelligence. Currently studying computer science in Chungbuk National University, South Korea. Fast learner, curious about new things, love to interact with people.

@@ -1,7 +1,27 @@
 ---
 layout: default
 ---
-
+<style>
+  .category-title {
+    clear: left;
+    padding-top: 5%;
+    text-align: center;
+  }
+@media (max-width: 650px) {
+    h1 {
+      font-size: 1.5em;
+    }
+    h3 {
+      font-size: 1.3em;
+    }
+}
+.posts-list {
+    clear: left;
+    padding-top: 2%;
+    list-style: none;
+    text-align: center;
+}
+</style>
 <ul class="category-title">
   <h1>{{page.title}}</h1>
 </ul>
@@ -10,7 +30,7 @@ layout: default
   site.categories[category] %}
   <li>
     <h3>
-      <a href="{{  post.url | relative_url }}"> {{ post.title }} </a>
+      <bold><a href="{{  post.url | relative_url }}"> {{ post.title }}  </a></bold>
       <small>{{ post.date | date_to_string }}</small>
     </h3>
   </li>

@@ -1,12 +1,16 @@
 .post-content > :last-child {
   margin-bottom: 0;
 }
+
+article {
+  display: block;
+}
+
 article,
 .comments {
-  @extend %padding-regular;
-  border-bottom: 1px solid $border-color;
-  float: left;
-  width: 100%;
+  padding: 5% 10%;
+  max-width: 1200px;
+  margin: 0px auto;
 }
 article {
   .subtitle {
@@ -25,13 +29,23 @@ article {
     font-size: 0.9em;
   }
 }
+
+.center {
+  display: block;
+  margin: auto;
+}
 header {
   h1 {
     margin: 0;
   }
 }
+@media (max-width: 650px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
 .meta {
-  color: rgba($text-color, .5);
+  color: rgba($text-color, 0.5);
   font-size: 0.9em;
   letter-spacing: 0.1em;
   margin: 0;
@@ -48,7 +62,7 @@ header {
     margin-bottom: 0;
     padding: $padding-large/2.5 $padding-large;
     .meta {
-      color: rgba($feature-image-text-color, .7);
+      color: rgba($feature-image-text-color, 0.7);
     }
   }
   .post-content {

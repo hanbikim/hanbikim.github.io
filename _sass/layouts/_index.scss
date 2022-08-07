@@ -18,21 +18,27 @@
   color: $header-desc-link-color
 }
 
-// Post listing
+/// Post listing
 .posts {
   .post-teaser {
     // @extend %padding-regular;
-    padding-right: $padding-large;
-    padding-left: $padding-large;
-    padding-top: $padding-x-small;
-    padding-bottom: $padding-x-small;
-    width: 100%;
-    margin-bottom: 0;
-    display: inline-block;
+    padding: 3% 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flow-root;
     background-size: $feature-image-size;
-    border-bottom: 1px solid $border-color;
     p a {
       @extend .body-link;
+    }
+  }
+  @media (max-width: 1000px) {
+    .post-teaser {
+      padding-right: 3%;
+      padding-left: 3%;
+    }
+
+    h2 {
+      font-size: 1em;
     }
   }
   .excerpt {
