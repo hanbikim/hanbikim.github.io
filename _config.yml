@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/"
+baseurl: 
 url: "https://hanbikim.github.io/"
 
 # THEME-SPECIFIC CONFIGURATION
@@ -70,7 +70,7 @@ theme_settings:
 
 encoding: "utf-8"
 # Configure the plugin here
-category_path: "category" # <- default value
+# category_path: "category" # <- default value
 category_layout: "category.html" # <- default value
 
 # PAGINATION
