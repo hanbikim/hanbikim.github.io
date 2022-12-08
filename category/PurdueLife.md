@@ -1,5 +1,5 @@
 ---
 layout: category
 title: Purdue Life
-permalink: "Purdue/Daily"
+permalink: "Purdue/Life"
 ---
